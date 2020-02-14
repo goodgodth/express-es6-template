@@ -4,7 +4,8 @@
   "description": "Express ES6 Template api",
   "main": "server.js",
   "scripts": {
-    "start": "node transpiled/index.js"
+    "start_staging": "node transpiled/index.js",
+    "start_production": "node transpiled/index.js PRODUCTION"
   },
   "author": "Ar-ruk Kachen",
   "license": "MIT",
@@ -15,7 +16,11 @@
     "nodemon": "^1.19.4"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dateformat": "^3.0.3",
     "express": "^4.16.4",
-    "moment": "^2.22.2"
+    "fs": "0.0.1-security",
+    "moment": "^2.22.2",
+    "path": "^0.12.7"
   }
 }

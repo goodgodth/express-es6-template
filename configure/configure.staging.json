@@ -1,0 +1,42 @@
+{
+    "project_name": "BIM2019API",
+    "environment": "STAGING",
+    "port": 4444,
+    "main_url": "https://pnl.ais.co.th",
+    "api_url": "http://localhost:4000",
+    "auth_jwt_url": "http://localhost:5050/",
+    "sso_url": "https://ids.ais.co.th/samlsso",
+    "sso_logoff_url": "https://staging-bim.ais.co.th/sso/logoff",
+    "cert_path": "/home/serveradm/pnl_node/",
+    "logfilename": "bim2020-node-express.log",
+    "logdebugfilename": "debug-bim2020-express.log",
+    "reverse_proxy_ip_frontend": "10.137.18.64",
+    "nas_url": "http://10.137.18.81/fs/",
+    "user_fe_log_path": "users-log/",
+    "jwtsecertKey": "BNK48-noey-music-cherpang-pun-mobile-bamboo-june-mewnich",
+    "jwttoken_exp_in_sec": 6000,
+    "jwttoken": {
+        "algorithm": "HS256",
+        "audience": "VCA-TOA",
+        "issuer": "Authorization/AIS",
+        "subject": "BIM2019"
+    },
+    "debugmode": "N",
+    "nasPath": "/opt/nas/",
+    "nasPathIn": "/opt/nas/in/",
+    "mmsPathIn": "/opt/nas/BIM/product/MT/",
+    "nasPathForRecurring": "/opt/nas/shared/in/",
+    "pns_sync_report_url": "http://10.104.240.165:8080/pns/api/v1/notifications/pushRefIds/[::PUSH_REF_ID::]?sender=BIM",
+    "pns_sync_report_header": {
+        "x-orderRef": "6123"
+    },
+    "db": {
+        "user": "bim",
+        "password": "ssapmib",
+        "connectString": "10.138.53.82:1523/bimDB",
+        "poolMin": 0,
+        "poolMax": 5,
+        "poolIncrement": 1,
+        "poolPingInterval": 10
+    }
+}
