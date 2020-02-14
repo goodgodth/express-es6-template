@@ -1,0 +1,21 @@
+{
+  "name": "Express-ES6-Template",
+  "version": "1.0.0",
+  "description": "Express ES6 Template api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node transpiled/index.js"
+  },
+  "author": "Ar-ruk Kachen",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.22.2"
+  }
+}
