@@ -4,6 +4,8 @@ import loadConfig from "../configure/loadConfigure";
 import Logger from "../logger/logger";
 import authFilter from "../filter/authFilter";
 import bodyParser from "body-parser";
+import moment from "moment";
+import healthCheckUtil from "../util/healthCheck.util";
 
 //Load Variable from Configure
 var configure_var;
@@ -27,6 +29,10 @@ Logger.configureObj = configure_var;
 //console.log(Logger.configureObj);
 Logger.write("load Configure : " + JSON.stringify(Logger.configureObj));
 
+//const now = moment().format("YYYY-MM-DD HH:mm:ss");
+//const serverHealthCheck = new healthCheck(now, 0, now);
+//Logger.write("Server Start ... : " + JSON.stringify(serverHealthCheck));
+
 const app = express();
 app.use(express.json());
 
@@ -37,6 +43,11 @@ app.use(
     extended: true
   })
 );
+
+//console.log(moment.now());
+
+healthCheckUtil.setServiceOn(moment.now());
+//console.log(JSON.stringify(healthCheckUtil.healthCheckModel));
 
 app.use(authFilter);
 
